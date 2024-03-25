@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프과제</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- 메뉴 -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">HCJ_Project</div>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Main </a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="contact.html">Calender</a>
+          </li>
+          <li>
+            <a href="memo.html">Memo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 메인 섹션 -->
+    <section class="main">
+      <div class="container">
+        <form>
+          <label for="fname">Title:</label>
+          <!-- label for="fname": 사용자가 편하게? 칸 클릭 안해도? -->
+          <input type="text" name="fname" id="fname" value="" />
+          <!-- value="John": 기본값이 John -->
+
+          <br />
+          <label for="pass">Password:</label>
+          <input
+            type="password"
+            name="passwd"
+            id="pass"
+            placeholder="패스워드 입력"
+          />
+          <!-- autofocus: 마우스 커서를 기본으로 이곳에 설정 -->
+          <br />
+          <input type="tel" />
+
+          <!-- 박스 -->
+          <fieldset>
+            <legend>메모장</legend>
+            <input type="datetime-local" name="date" />
+            <br>
+            
+
+            <label for=""
+              ><input type="checkbox" value="s_3" /> 
+              <textarea id="notepad" placeholder="Start typing here..."></textarea>
+              
+              <script>
+                  document.getElementById('notepad').value = localStorage.getItem('notepadContent') || '';
+                  document.getElementById('notepad').addEventListener('input', function() {
+                      localStorage.setItem('notepadContent', this.value);
+                  });
+              </script>
+            </label>
+
+            <input type="submit" value="저장하기" />
+            <br />
+            <br />
+            <input type="reset" value="초기화" />
+
+            
+          </fieldset>
+          <br /><br />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

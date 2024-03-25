@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프과제</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+        <!-- 메뉴 -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">HCJ_Project</div>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Main </a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="contact.html">Calender</a>
+          </li>
+          <li>
+            <a href="memo.html">Memo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 메인 섹션 -->
+    <section class="main">
+      <div class="container">
+        <h1>웹프로그래밍_01분반</h1>
+        <p>
+          학교 홈페이지: <a href="https://www.joongbu.ac.kr/home/">중부대학교</a></p>
+        <p>GitHub: <a href="https://github.com/">hyyyeon</a></p>
+          <br> 
+
+          
+          <hr />
+        <p>
+          배경색 변경:
+          <button onclick="pink()">Pink</button>
+          <button onclick="lightgoldenrodyellow()">lightyellow</button>
+          <button onclick="whitesmoke()">reset</button>
+        </p>
+        <p>
+          자기소개:
+          <button onmouseover="name1()" onmouseout="hide()">이름</button>
+          <button onmouseover="number()" onmouseout="hide()">학번</button>
+          <button onmouseover="showjs()" onmouseout="hide()">학과</button>
+        </p>
+
+        <hr />
+        <br />
+        <div>
+          <img id="fig" height="200px" />
+          <p id="desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
